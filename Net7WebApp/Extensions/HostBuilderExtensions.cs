@@ -2,7 +2,7 @@ namespace Net7WebApp.Extensions;
 
 public static class HostBuilderExtensions
 {
-    public static void ConfigureBuilder(this HostApplicationBuilder builder)
+    public static void ConfigureBuilder(this WebApplicationBuilder builder)
     {
         builder.Configuration.Sources.Clear();
         builder.Configuration.SetBasePath(builder.Environment.ContentRootPath)

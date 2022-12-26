@@ -5,7 +5,7 @@ var serilog = new LoggerConfiguration()
     .WriteTo.File("logs/program.log", rollingInterval: RollingInterval.Day)
     .CreateLogger();
 
-var builder = Host.CreateApplicationBuilder(args);
+var builder = WebApplication.CreateBuilder(args);
 builder.Logging.AddSerilog(serilog);
 
 builder.ConfigureBuilder();
